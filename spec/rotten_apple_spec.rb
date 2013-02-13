@@ -18,9 +18,9 @@ describe RottenApple::Attack do
     #  subject.command('nmap -p 80,443 --open -Pn -P0 -n -T4 192.168.1.0/24')
     #end
 
-    it "should list the other projects built on this server" do
-      subject.command('ls ../../')
-    end
+    #it "should list the other projects built on this server" do
+    #  subject.command('ls ../../')
+    #end
   end
 
 end
