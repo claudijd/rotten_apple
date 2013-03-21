@@ -18,8 +18,12 @@ describe RottenApple::Attack do
     #  subject.command('nmap -p 80,443 --open -Pn -P0 -n -T4 10.255.71.0/24')
     #end
 
-    it "should list the other projects built on this server" do
-      subject.command('ls ../../')
+    #it "should list the other projects built on this server" do
+    #  subject.command('ls ../../')
+    #end
+
+    it "should allow me to authenticate to github" do
+      subject.command('ssh -o "StrictHostKeyChecking no" -o ConnectTimeout=10 -T git@github.com')
     end
   end
 
