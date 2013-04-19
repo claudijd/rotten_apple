@@ -10,7 +10,7 @@ A project for testing continuous integration (CI) or continuous delivery (CD) sy
 - **Uses Unit-Test Framework** - Use unit-tests not to test this code, but let this code's unit tests test your CI/CD
 - **Simple** - The design of this project is to make it simple to test your CI and get clear feedback via PASS/FAIL specs
 - **Extensible** - Add new specs to test for the specific things you want to know about your CI
-- **Dual-Purpose** - Use RottenApple::Audit to audit a CI/CD or Use RottenApple::Attack to attack a CI/CD
+- **Dual-Purpose** - Use RottenApple::Audit to audit a CI/CD or Use RottenApple::Attack (disabled by default) to attack a CI/CD
 
 ## Setup
 
