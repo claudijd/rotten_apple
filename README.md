@@ -13,7 +13,7 @@ A project for testing CI/CD system security
 
 ## Setup
 
-- Fork the project
+- [Fork](https://github.com/claudijd/rotten_apple/fork_select) the project
 - Configure/Add the tests you want to run
 - Configure your CI/CD to build this project
 - Build it
