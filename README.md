@@ -1,4 +1,4 @@
-![Rotten Apple Logo](https://github.com/claudijd/rotten_apple/blob/master/images/rotten_apple.png)
+![Rotten Apple Logo](https://github.com/claudijd/rotten_apple/blob/master/images/rotten_apple.png?raw=true)
 
 # Rotten Apple
 
