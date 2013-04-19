@@ -12,11 +12,11 @@ A project for testing CI/CD system security
 
 ## Setup
 
-Fork the project
-Configure/Add the tests you want to run
-Configure your CI/CD to build this project
-Build it
-Check the Unit-test Results for detailsa
+- Fork the project
+- Configure/Add the tests you want to run
+- Configure your CI/CD to build this project
+- Build it
+- Check the Unit-test Results for detailsa
 
 ## Contributing
 
