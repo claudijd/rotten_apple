@@ -107,5 +107,17 @@ module RottenApple
         end
       end
     end
+
+    describe 'https_request' do
+      before :each do
+        @response = @helper.https_request("https://github.com")
+      end
+
+      subject{@response}
+
+      it "should contain the GitHub main page" do
+        subject.body.match(/GitHub/).should_not be_nil
+      end
+    end
   end
 end

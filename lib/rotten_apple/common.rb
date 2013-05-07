@@ -2,6 +2,8 @@ require 'etc'
 require 'socket'
 require 'ipaddr'
 require 'open3'
+require 'net/https'
+require 'uri'
 
 module RottenApple
   module Common
@@ -27,10 +29,7 @@ module RottenApple
 
     def get_system_users
       users = []
-
-      Etc.passwd {|u|
-        users << u.name
-      }
+      Etc.passwd {|u| users << u.name}
 
       return users
     end
@@ -45,6 +44,8 @@ module RottenApple
       rescue Errno::ENOENT
         return nil
       end
+
+      return nil
     end
 
     def get_private_ip_addresses
@@ -93,6 +94,17 @@ module RottenApple
       end
 
       return private_ssh_keys
+    end
+
+    def https_request(url)
+      uri = URI.parse(url)
+      http = Net::HTTP.new(uri.host, uri.port)
+      http.use_ssl = true
+      http.verify_mode = OpenSSL::SSL::VERIFY_NONE
+
+      request = Net::HTTP::Get.new(uri.request_uri)
+
+      http.request(request)
     end
   end
 end
