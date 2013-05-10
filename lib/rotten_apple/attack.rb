@@ -67,5 +67,15 @@ module RottenApple
       end
     end
 
+    def get_private_ssh_keys
+      keys = get_private_ssh_keys
+
+      keys.each do |private_key|
+        puts private_key
+      end
+
+      return keys
+    end
+
   end
 end

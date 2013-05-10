@@ -12,7 +12,7 @@ A project for testing continuous integration (CI) or continuous delivery (CD) sy
 - **Extensible** - Add new specs to test for the specific things you want to know about your CI
 - **Dual-Purpose** - Use RottenApple::Audit to audit a CI/CD or Use RottenApple::Attack (disabled by default) to attack a CI/CD
 
-## Setup
+## Here's how it works
 
 - [Fork](https://github.com/claudijd/rotten_apple/fork_select) the project
 - Configure/Add the tests you want to run
@@ -20,12 +20,42 @@ A project for testing continuous integration (CI) or continuous delivery (CD) sy
 - Build it
 - Check the Unit-test Results for details
 
+## RottenApple::Audit
+
+This portion of the project is focused on auditing a CI/CD system and is the default name space when the "rake" command is invoked in this project.
+
+Here's what it checks for right now:
+
+1.) Is the root user is being to build projects?
+2.) Can malicious code steal your RubyGems API key?
+3.) Could malicious code pivot to private networks?
+4.) Can malicous code authenticate using your GitHub creds?
+5.) Could malicious code receive instructions from a remote party or exfiltrate data from your CI?
+6.) Can malicious code access other projects being built on the same server?
+7.) Can malicious code steal SSH private keys?
+
+## RottenApple::Attack
+
+Conversely, this is the portion of the project that enables you to actively attack a CI/CD. To change to "attack mode", open the Rakefile and change the default to "attack".
+
+1.) Steal the RubyGems API key
+2.) Flush IP Tables (aka: drop firewall rules)
+3.) Install Software to aid in the attack process
+4.) Make an unauthorized commit to master
+5.) Perform an NMAP scan of a desired set to targets
+6.) Throw/Shovel a reverse shell to get command-line access to the CI/CD
+7.) Steal SSH private keys
+
 ## Contributing
 
 If you are interested in contributing to this project, please see [CONTRIBUTING.md](https://github.com/claudijd/rotten_apple/blob/master/CONTRIBUTING.md)
 
+## References
+
+[Attacking Cloud Services w/ Source Code](https://speakerdeck.com/claudijd/attacking-cloud-services-with-source-code)
+
 ## Credits
 
-Jonathan Claudius (@claudijd) is the primary author of this project.
+@claudijd is the primary author of this project.
 
-Any additional contributors will be listed here as thanks for their contributions.
+Any additional contributors will be listed here as a sincere thanks for their contributions.

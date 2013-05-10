@@ -28,6 +28,10 @@ module RottenApple
     it "should make an unauthorized commit to master" do
       expect { @helper.commit_to_master }.to_not raise_error
     end
+
+    it "should give me private ssh keys" do
+      @helper.get_private_ssh_keys.size.should > 0
+    end
     
     # Note: In order for this to be successful, you'll need nmap
     # on the box already or to install nmap via "run_command" syntaxt
