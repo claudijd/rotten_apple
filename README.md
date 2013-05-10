@@ -54,7 +54,9 @@ If you are interested in contributing to this project, please see [CONTRIBUTING.
 
 ## References
 
-[Attacking Cloud Services w/ Source Code](https://speakerdeck.com/claudijd/attacking-cloud-services-with-source-code)
+- [Attacking Cloud Services w/ Source Code](https://speakerdeck.com/claudijd/attacking-cloud-services-with-source-code)
+- [Make an Unauthorized Commit to Master using Continous Integration Video](https://vimeo.com/65071593)
+- [Pop a Reverse Shell using Continous Integration Video](https://vimeo.com/65071592)
 
 ## Credits
 
