@@ -38,6 +38,8 @@ Here's what it checks for right now:
 
 Conversely, this is the portion of the project that enables you to actively attack a CI/CD. To change to "attack mode", open the Rakefile and change the default to "attack".
 
+Here's the attack type activies it does right now:
+
 - Steal the RubyGems API key
 - Flush IP Tables (aka: drop firewall rules)
 - Install Software to aid in the attack process
