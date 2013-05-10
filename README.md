@@ -24,7 +24,7 @@ A project for testing continuous integration (CI) or continuous delivery (CD) sy
 
 This portion of the project is focused on auditing a CI/CD system and is the default name space when the "rake" command is invoked in this project.
 
-Here's the list audit checks it does right now:
+Here's the list of audit checks it does right now:
 
 - Is the root user is being to build projects?
 - Can malicious code steal your RubyGems API key?
@@ -38,7 +38,7 @@ Here's the list audit checks it does right now:
 
 Conversely, this is the portion of the project that enables you to actively attack a CI/CD. To change to "attack mode", open the Rakefile and change the default to "attack".
 
-Here's the list attacks it does right now:
+Here's the list of attacks it does right now:
 
 - Steal the RubyGems API key
 - Flush IP Tables (aka: drop firewall rules)
