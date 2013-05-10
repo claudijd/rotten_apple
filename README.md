@@ -58,6 +58,6 @@ If you are interested in contributing to this project, please see [CONTRIBUTING.
 
 ## Credits
 
-@claudijd is the primary author of this project.
+[@claudijd](https://github.com/claudijd) is the primary author of this project.
 
 Any additional contributors will be listed here as a sincere thanks for their contributions.
