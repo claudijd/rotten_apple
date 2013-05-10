@@ -26,25 +26,25 @@ This portion of the project is focused on auditing a CI/CD system and is the def
 
 Here's what it checks for right now:
 
-1.) Is the root user is being to build projects?
-2.) Can malicious code steal your RubyGems API key?
-3.) Could malicious code pivot to private networks?
-4.) Can malicous code authenticate using your GitHub creds?
-5.) Could malicious code receive instructions from a remote party or exfiltrate data from your CI?
-6.) Can malicious code access other projects being built on the same server?
-7.) Can malicious code steal SSH private keys?
+- Is the root user is being to build projects?
+- Can malicious code steal your RubyGems API key?
+- Could malicious code pivot to private networks?
+- Can malicous code authenticate using your GitHub creds?
+- Could malicious code receive instructions from a remote party or exfiltrate data from your CI?
+- Can malicious code access other projects being built on the same server?
+- Can malicious code steal SSH private keys?
 
 ## RottenApple::Attack
 
 Conversely, this is the portion of the project that enables you to actively attack a CI/CD. To change to "attack mode", open the Rakefile and change the default to "attack".
 
-1.) Steal the RubyGems API key
-2.) Flush IP Tables (aka: drop firewall rules)
-3.) Install Software to aid in the attack process
-4.) Make an unauthorized commit to master
-5.) Perform an NMAP scan of a desired set to targets
-6.) Throw/Shovel a reverse shell to get command-line access to the CI/CD
-7.) Steal SSH private keys
+- Steal the RubyGems API key
+- Flush IP Tables (aka: drop firewall rules)
+- Install Software to aid in the attack process
+- Make an unauthorized commit to master
+- Perform an NMAP scan of a desired set to targets
+- Throw/Shovel a reverse shell to get command-line access to the CI/CD
+- Steal SSH private keys
 
 ## Contributing
 
