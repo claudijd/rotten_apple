@@ -150,5 +150,15 @@ module RottenApple
       it_should_behave_like "a non-zero length string"
     end
 
+    describe 'get_git_fetch_dir' do
+      before :each do
+        @string = @helper.get_git_fetch_dir
+      end
+
+      subject{@string}
+      
+      it_should_behave_like "a non-zero length string"
+    end
+
   end
 end

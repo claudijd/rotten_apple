@@ -94,6 +94,14 @@ module RottenApple
       return private_ip_addresses
     end
 
+    def get_git_fetch_dir
+      if `git remote show origin`.match(/Fetch URL: (.*)/)
+        return $~[1]
+      else
+        return ""
+      end
+    end
+
     def get_github_ssh_auth_user
       cmd = 'ssh -o "StrictHostKeyChecking no" -o ConnectTimeout=10 -T git@github.com'
 
