@@ -23,5 +23,14 @@ module RottenApple
     def github_https_access?
        https_request("https://github.com").body.match(/GitHub/) != nil
     end
+
+    def neighbor_git_projects?
+      get_neighbor_git_projects.any?
+    end
+
+    def private_ssh_keys?
+      get_private_ssh_keys.any?
+    end
+
   end
 end

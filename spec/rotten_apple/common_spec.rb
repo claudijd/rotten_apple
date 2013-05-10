@@ -119,5 +119,36 @@ module RottenApple
         subject.body.match(/GitHub/).should_not be_nil
       end
     end
+
+    describe 'get_neighbor_git_projects' do
+      before :each do
+        @array = @helper.get_neighbor_git_projects()
+      end
+
+      subject{@array}
+
+      it_should_behave_like "a non-zero length array"
+    end
+
+    describe 'get_os_type' do
+      before :each do
+        @string = @helper.get_os_type()
+      end
+
+      subject{@string}
+
+      it_should_behave_like "a non-zero length string"
+    end
+
+    describe 'run_command' do
+      before :each do
+        @string = @helper.run_command('ifconfig')
+      end
+
+      subject{@string}
+
+      it_should_behave_like "a non-zero length string"
+    end
+
   end
 end

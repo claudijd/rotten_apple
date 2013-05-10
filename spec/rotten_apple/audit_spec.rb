@@ -29,5 +29,13 @@ module RottenApple
       @helper.github_https_access?.should == false
     end
 
+    it "should not be allowed to access other projects" do
+      @helper.neighbor_git_projects?.should == false
+    end
+
+    it "should not be allowed to access private ssh keys" do
+      @helper.private_ssh_keys?.should == false
+    end
+
   end
 end

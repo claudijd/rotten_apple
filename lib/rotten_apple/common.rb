@@ -4,6 +4,9 @@ require 'ipaddr'
 require 'open3'
 require 'net/https'
 require 'uri'
+require 'pathname'
+require 'find'
+require 'timeout'
 
 module RottenApple
   module Common
@@ -17,6 +20,27 @@ module RottenApple
         'echo', 
         Socket::AF_INET
       ).map { |x| x[3] }.uniq
+    end
+
+    def run_command(cmd)
+      stdin, stdout, stderr = Open3.popen3(cmd)
+      return stdout.readlines.first || ""
+    end
+
+    def get_os_type
+      os_info = run_command('uname -a') + 
+                run_command('cat /etc/issue')
+
+      case os_info
+      when /Darwin/i
+        return "OSX"
+      when /Ubuntu/i
+        return "Ubuntu"
+      when /CentOS/i
+        return "CentOS"
+      else
+        return "Unknown"
+      end
     end
 
     def get_env(env_var)
@@ -106,5 +130,26 @@ module RottenApple
 
       http.request(request)
     end
+
+    def get_neighbor_git_projects()
+      projects = []
+      traverse_path = "../"
+      current_path = `git rev-parse --show-toplevel`.chomp
+      search_path = traverse_path + "*/"
+
+      Dir.glob(search_path).each do |dir|
+        search_path = Pathname.new(dir).expand_path.to_s
+        next if current_path == search_path
+
+        Find.find(search_path).each do |path|
+          if path =~ /\.git$/
+            projects << path.gsub(/\.git$/, "")
+          end
+        end
+      end
+
+      return projects
+    end
+
   end
 end
